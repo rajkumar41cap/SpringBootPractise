@@ -1,4 +1,4 @@
-package com.ait.beans;
+package com.ait.BeanJavaClassTest;
 
 import org.springframework.stereotype.Component;
 
