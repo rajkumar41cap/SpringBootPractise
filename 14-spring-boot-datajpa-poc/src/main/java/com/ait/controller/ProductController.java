@@ -19,8 +19,8 @@ public class ProductController {
 	}
 	
 	public ProductsBean getProducts(String prodCode) {
-		prodService.getProducts(prodCode);
-		return null;
+		ProductsBean products = prodService.getProducts(prodCode);
+		return products;
 	}
 	
 	public ProductsBean getProducts(String prodName,String prodLine) {

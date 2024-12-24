@@ -10,12 +10,13 @@ import lombok.Data;
 @Table(name = "products")
 public class ProductsEntity {
 	@Id
-	private String productCode;
-	private String productName;
-	private String productLine;
-	private String productVendor;
-	private String productDescription;
-	private int quantityInStocks;
-	private double buyPrice;
+	private String productcode;
+	private String productname;
+	private String productline;
+	private String productscale;
+	private String productvendor;
+	private String productdescription;
+	private int quantityinstock;
+	private double buyprice;
 	private double MSRP;
 }

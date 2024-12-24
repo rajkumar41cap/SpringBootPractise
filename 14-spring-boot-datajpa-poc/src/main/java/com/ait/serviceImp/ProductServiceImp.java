@@ -3,6 +3,7 @@ package com.ait.serviceImp;
 import java.util.Iterator;
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +28,11 @@ public class ProductServiceImp implements ProductsService {
 	@Override
 	public ProductsBean getProducts(String prodCode) {
 		ProductsEntity products = prodRepo.getProducts(prodCode);
-		System.out.println(products);
+		if(products!=null) {
+			ProductsBean prodBean=new ProductsBean();
+			BeanUtils.copyProperties(products, prodBean);
+			return prodBean;
+		}
 		return null;
 	}
 
